@@ -1,0 +1,6 @@
+data_loader:
+  file_path: "data/sample_data.csv"
+  file_type: "csv"
+transformation:
+  normalize: false
+  scaling_method: "minmax"
