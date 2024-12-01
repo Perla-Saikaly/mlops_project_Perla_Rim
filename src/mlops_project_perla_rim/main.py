@@ -32,6 +32,12 @@ def main():
     print("Transformed Data:")
     print(transformed_data)
 
+    # Use TransformerFactory to transform data
+    transformer = TransformerFactory.get_transformer(config.transformation.scaling_method)
+    transformed_data = transformer.transform(data)
+    print("Transformed Data:")
+    print(transformed_data)
+
 
         # Use ModelFactory to select and train the model
     model = ModelFactory.get_model(config.model.type)
