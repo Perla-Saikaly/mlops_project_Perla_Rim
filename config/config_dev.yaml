@@ -5,3 +5,6 @@ data_loader:
 transformation:
   normalize: false
   scaling_method: "minmax"
+
+model:
+  type: "linear" # Options: "linear" or "tree
