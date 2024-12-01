@@ -5,7 +5,7 @@ from mlops_project_perla_rim.config import load_config
 from mlops_project_perla_rim.data_loader import DataLoaderFactory
 
 from mlops_project_perla_rim.data_transformer import TransformerFactory
-from mlops_project_perla_rim.model import ModelFactory 
+from mlops_project_perla_rim.model import ModelFactory
 
 parser = argparse.ArgumentParser(description="Run the ML data pipeline with specified configuration.") 
 parser.add_argument(
