@@ -27,7 +27,7 @@ class Config(BaseModel):
     data_loader: DataLoaderConfig
     transformation: TransformationConfig
     model: ModelConfig
- 
+
 # src/ml_data_pipeline/config.py
 def load_config(config_path: str) -> Config:
     raw_config = OmegaConf.load(config_path)
