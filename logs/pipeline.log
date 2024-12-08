@@ -6,3 +6,27 @@
 2024-12-08 18:53:46.230 | INFO     | mlops_project_perla_rim.main:main:65 - Data transformed successfully.
 2024-12-08 18:53:46.250 | INFO     | mlops_project_perla_rim.main:main:79 - Model training and prediction completed successfully.
 2024-12-08 18:53:46.253 | INFO     | mlops_project_perla_rim.main:main:85 - Pipeline execution completed successfully.
+2024-12-08 19:23:52.442 | INFO     | mlops_project_perla_rim.main:main:44 - Pipeline execution started.
+2024-12-08 19:23:52.448 | INFO     | mlops_project_perla_rim.main:main:46 - Loaded configuration successfully.
+2024-12-08 19:23:52.449 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-08 19:23:52.459 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-08 19:23:52.460 | INFO     | mlops_project_perla_rim.main:main:54 - Data loaded successfully.
+2024-12-08 19:23:52.497 | INFO     | mlops_project_perla_rim.main:main:65 - Data transformed successfully.
+2024-12-08 19:23:52.522 | INFO     | mlops_project_perla_rim.main:main:79 - Model training and prediction completed successfully.
+2024-12-08 19:23:52.534 | INFO     | mlops_project_perla_rim.main:main:85 - Pipeline execution completed successfully.
+2024-12-08 19:29:15.824 | INFO     | mlops_project_perla_rim.main:main:44 - Pipeline execution started.
+2024-12-08 19:29:15.829 | INFO     | mlops_project_perla_rim.main:main:46 - Loaded configuration successfully.
+2024-12-08 19:29:15.830 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-08 19:29:15.839 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-08 19:29:15.839 | INFO     | mlops_project_perla_rim.main:main:54 - Data loaded successfully.
+2024-12-08 19:29:15.876 | INFO     | mlops_project_perla_rim.main:main:65 - Data transformed successfully.
+2024-12-08 19:29:15.898 | INFO     | mlops_project_perla_rim.main:main:79 - Model training and prediction completed successfully.
+2024-12-08 19:29:15.900 | INFO     | mlops_project_perla_rim.main:main:85 - Pipeline execution completed successfully.
+2024-12-08 19:31:09.006 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-08 19:31:09.011 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-08 19:31:09.011 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-08 19:31:09.022 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-08 19:31:09.023 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-08 19:31:09.049 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-08 19:31:09.075 | INFO     | mlops_project_perla_rim.main:main:84 - Model training and prediction completed successfully.
+2024-12-08 19:31:09.079 | INFO     | mlops_project_perla_rim.main:main:90 - Pipeline execution completed successfully.

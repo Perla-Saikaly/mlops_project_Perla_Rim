@@ -1,10 +1,10 @@
 """
 Main module for running the ML data pipeline.
- 
-This module provides a command-line interface to run the ML pipeline, 
+
+This module provides a command-line interface to run the ML pipeline,
 load configurations, process data, and train a model.
 """
- 
+
 import argparse
 from mlops_project_perla_rim.config import load_config
 from mlops_project_perla_rim.data_loader import DataLoaderFactory
@@ -12,31 +12,34 @@ from mlops_project_perla_rim.data_transformer import TransformerFactory
 from mlops_project_perla_rim.model import ModelFactory
 from loguru import logger
 
-logger.add("logs/pipeline.log", rotation="500 MB") # Log rotation at 500 MB
+logger.add("logs/pipeline.log", rotation="500 MB")  # Log rotation at 500 MB
 
 # Parser description
-parser = argparse.ArgumentParser(description="Run the ML data pipeline with specified configuration.")
+parser = argparse.ArgumentParser(
+    description="Run the ML data pipeline with specified configuration."
+)
 parser.add_argument(
     "--config",
     type=str,
     required=True,
     help="Path to the configuration file (e.g., config/config.yml).",
 )
- 
+
+
 def main() -> None:
     """
     Main function for running the ML pipeline.
- 
+
     This function:
     1. Parses command-line arguments.
     2. Loads configuration settings.
     3. Loads and transforms data.
     4. Trains a machine learning model.
- 
+
     Raises:
         FileNotFoundError: If the specified config file does not exist.
         ValueError: If required configuration values are missing.
- 
+
     Returns:
         None
     """
@@ -46,7 +49,7 @@ def main() -> None:
     logger.info("Loaded configuration successfully.")
     print("Loaded Configuration:")
     print(config)
- 
+
     # Load data
     try:
         data_loader = DataLoaderFactory.get_data_loader(config.data_loader.file_type)
@@ -57,10 +60,12 @@ def main() -> None:
     except Exception as e:
         logger.error(f"Failed to load data: {e}")
         return
- 
+
     # Transform data
     try:
-        transformer = TransformerFactory.get_transformer(config.transformation.scaling_method)
+        transformer = TransformerFactory.get_transformer(
+            config.transformation.scaling_method
+        )
         transformed_data = transformer.transform(data)
         logger.info("Data transformed successfully.")
         print("Transformed Data:")
@@ -68,7 +73,7 @@ def main() -> None:
     except Exception as e:
         logger.error(f"Failed to transform data: {e}")
         return
- 
+
     # Train model
     try:
         X = transformed_data.drop(columns=["Health_Score"])
@@ -84,5 +89,7 @@ def main() -> None:
         return
     logger.info("Pipeline execution completed successfully.")
     pass
+
+
 if __name__ == "__main__":
     main()

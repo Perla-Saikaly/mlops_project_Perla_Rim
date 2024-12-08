@@ -3,6 +3,7 @@ import pytest
 from mlops_project_perla_rim.data_loader import DataLoaderFactory
 from pytest import approx
 
+
 # Fixture to create a temporary CSV file with your data
 @pytest.fixture
 def sample_csv(tmp_path):
@@ -16,21 +17,30 @@ def sample_csv(tmp_path):
     )
     return str(csv_file)
 
+
 # Test case to check if the data loader works properly with the CSV
 def test_csv_loader(sample_csv):
-    loader = DataLoaderFactory.get_data_loader("csv")  # Ensure your DataLoaderFactory has the proper method for this
+    loader = DataLoaderFactory.get_data_loader(
+        "csv"
+    )  # Ensure your DataLoaderFactory has the proper method for this
     data = loader.load_data(sample_csv)
-    
+
     # Check that the loaded data is a pandas DataFrame
     assert isinstance(data, pd.DataFrame)
-    
+
     # Check that the DataFrame has the correct number of rows and columns
     assert data.shape == (3, 8)  # 3 rows, 8 columns as per your data example
-    
+
     # Check if the DataFrame columns match the expected columns
     expected_columns = [
-        "Age", "BMI", "Exercise_Frequency", "Diet_Quality", 
-        "Sleep_Hours", "Smoking_Status", "Alcohol_Consumption", "Health_Score"
+        "Age",
+        "BMI",
+        "Exercise_Frequency",
+        "Diet_Quality",
+        "Sleep_Hours",
+        "Smoking_Status",
+        "Alcohol_Consumption",
+        "Health_Score",
     ]
     assert list(data.columns) == expected_columns
 

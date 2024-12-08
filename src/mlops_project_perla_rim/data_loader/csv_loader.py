@@ -9,7 +9,7 @@ class CSVLoader(DataLoader):
 
     def load_data(self, file_path: str) -> pd.DataFrame:
         """Loads data from a CSV file.
-        
+
         Args:
             file_path (str): The path to the CSV file to load data from.
 

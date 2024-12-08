@@ -5,12 +5,15 @@ import pandas as pd
 from .base_model import Model
 # from typing import Optional
 
+
 class LinearModel(Model):
     """A linear model for training and prediction."""
 
     def __init__(self) -> None:
-        self.model: LinearRegression = LinearRegression()  # Initialize a scikit-learn Linear Regression model
-    
+        self.model: LinearRegression = (
+            LinearRegression()
+        )  # Initialize a scikit-learn Linear Regression model
+
     def train(self, X: pd.DataFrame, y: pd.Series) -> None:
         """Trains the linear model on the provided data.
 
@@ -21,7 +24,7 @@ class LinearModel(Model):
         print("Training Linear Model on data...")
         self.model.fit(X, y)  # Train the model
         print("Training complete.")
-    
+
     def predict(self, X: pd.DataFrame) -> pd.Series:
         """Predicts the target values using the linear model.
 
