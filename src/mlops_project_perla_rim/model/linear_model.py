@@ -3,7 +3,7 @@
 from sklearn.linear_model import LinearRegression
 import pandas as pd
 from .base_model import Model
-from typing import Optional
+# from typing import Optional
 
 class LinearModel(Model):
     """A linear model for training and prediction."""

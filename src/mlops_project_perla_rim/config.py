@@ -2,7 +2,7 @@
 
 from pydantic import BaseModel, validator
 from omegaconf import OmegaConf
-import os
+# import os
 from typing import Dict, Any
 
 class DataLoaderConfig(BaseModel):
@@ -35,5 +35,5 @@ class Config(BaseModel):
 
 def load_config(config_path: str) -> Config:
     raw_config = OmegaConf.load(config_path)
-    config_dict: dict[str, Any] = OmegaConf.to_container(raw_config, resolve=True)  # Fix the type here
+    config_dict: Dict[str, Any] = OmegaConf.to_container(raw_config, resolve=True)  # Fix the type here
     return Config(**config_dict)
