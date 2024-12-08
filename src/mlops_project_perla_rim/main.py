@@ -10,7 +10,10 @@ from mlops_project_perla_rim.config import load_config
 from mlops_project_perla_rim.data_loader import DataLoaderFactory
 from mlops_project_perla_rim.data_transformer import TransformerFactory
 from mlops_project_perla_rim.model import ModelFactory
- 
+from loguru import logger
+
+logger.add("logs/pipeline.log", rotation="500 MB") # Log rotation at 500 MB
+
 # Parser description
 parser = argparse.ArgumentParser(description="Run the ML data pipeline with specified configuration.")
 parser.add_argument(
@@ -38,30 +41,48 @@ def main() -> None:
         None
     """
     args = parser.parse_args()
+    logger.info("Pipeline execution started.")
     config = load_config(args.config)
+    logger.info("Loaded configuration successfully.")
     print("Loaded Configuration:")
     print(config)
  
     # Load data
-    data_loader = DataLoaderFactory.get_data_loader(config.data_loader.file_type)
-    data = data_loader.load_data(config.data_loader.file_path)
-    print("Loaded Data:")
-    print(data.head())
+    try:
+        data_loader = DataLoaderFactory.get_data_loader(config.data_loader.file_type)
+        data = data_loader.load_data(config.data_loader.file_path)
+        logger.info("Data loaded successfully.")
+        print("Loaded Data:")
+        print(data.head())
+    except Exception as e:
+        logger.error(f"Failed to load data: {e}")
+        return
  
     # Transform data
-    transformer = TransformerFactory.get_transformer(config.transformation.scaling_method)
-    transformed_data = transformer.transform(data)
-    print("Transformed Data:")
-    print(transformed_data.head())
+    try:
+        transformer = TransformerFactory.get_transformer(config.transformation.scaling_method)
+        transformed_data = transformer.transform(data)
+        logger.info("Data transformed successfully.")
+        print("Transformed Data:")
+        print(transformed_data.head())
+    except Exception as e:
+        logger.error(f"Failed to transform data: {e}")
+        return
  
     # Train model
-    X = transformed_data.drop(columns=["Health_Score"])
-    y = transformed_data["Health_Score"]
-    model = ModelFactory.get_model(config.model.type)
-    model.train(X, y)
-    predictions = model.predict(X)
-    print("Predictions:")
-    print(predictions)
+    try:
+        X = transformed_data.drop(columns=["Health_Score"])
+        y = transformed_data["Health_Score"]
+        model = ModelFactory.get_model(config.model.type)
+        model.train(X, y)
+        predictions = model.predict(X)
+        logger.info("Model training and prediction completed successfully.")
+        print("Predictions:")
+        print(predictions)
+    except Exception as e:
+        logger.error(f"Model training/prediction failed: {e}")
+        return
+    logger.info("Pipeline execution completed successfully.")
     pass
 if __name__ == "__main__":
     main()
