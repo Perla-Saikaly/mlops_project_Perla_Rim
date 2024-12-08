@@ -39,6 +39,7 @@ import pandas as pd
 from .base_model import Model
  
  
+
 class LinearModel(Model):
 
     """A linear model for training and prediction."""
@@ -60,7 +61,7 @@ class LinearModel(Model):
         """
 
         print("Training Linear Model on data...")
-
+        
         self.model.fit(X, y)  # Train the model
 
         print("Training complete.")

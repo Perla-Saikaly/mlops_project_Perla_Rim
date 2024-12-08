@@ -34,6 +34,9 @@
                     <a class="class" href="#LinearModel">LinearModel</a>
                             <ul class="memberlist">
                         <li>
+                                <a class="variable" href="#LinearModel.model">model</a>
+                        </li>
+                        <li>
                                 <a class="function" href="#LinearModel.train">train</a>
                         </li>
                         <li>
@@ -111,30 +114,51 @@
 
     </div>
     <a class="headerlink" href="#LinearModel"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="LinearModel-9"><a href="#LinearModel-9"><span class="linenos"> 9</span></a><span class="k">class</span> <span class="nc">LinearModel</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
-</span><span id="LinearModel-10"><a href="#LinearModel-10"><span class="linenos">10</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A linear model for training and prediction.&quot;&quot;&quot;</span>
-</span><span id="LinearModel-11"><a href="#LinearModel-11"><span class="linenos">11</span></a>
-</span><span id="LinearModel-12"><a href="#LinearModel-12"><span class="linenos">12</span></a>    <span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="LinearModel-13"><a href="#LinearModel-13"><span class="linenos">13</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Trains the linear model on the provided data.</span>
-</span><span id="LinearModel-14"><a href="#LinearModel-14"><span class="linenos">14</span></a>
-</span><span id="LinearModel-15"><a href="#LinearModel-15"><span class="linenos">15</span></a><span class="sd">        Args:</span>
-</span><span id="LinearModel-16"><a href="#LinearModel-16"><span class="linenos">16</span></a><span class="sd">            X (pd.DataFrame): The input features for training.</span>
-</span><span id="LinearModel-17"><a href="#LinearModel-17"><span class="linenos">17</span></a><span class="sd">            y (pd.Series): The target values for training.</span>
-</span><span id="LinearModel-18"><a href="#LinearModel-18"><span class="linenos">18</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="LinearModel-19"><a href="#LinearModel-19"><span class="linenos">19</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training Linear Model on data&quot;</span><span class="p">)</span>
-</span><span id="LinearModel-20"><a href="#LinearModel-20"><span class="linenos">20</span></a>        <span class="c1"># Dummy training logic</span>
-</span><span id="LinearModel-21"><a href="#LinearModel-21"><span class="linenos">21</span></a>
-</span><span id="LinearModel-22"><a href="#LinearModel-22"><span class="linenos">22</span></a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>
-</span><span id="LinearModel-23"><a href="#LinearModel-23"><span class="linenos">23</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Predicts the target values using the linear model.</span>
-</span><span id="LinearModel-24"><a href="#LinearModel-24"><span class="linenos">24</span></a>
-</span><span id="LinearModel-25"><a href="#LinearModel-25"><span class="linenos">25</span></a><span class="sd">        Args:</span>
-</span><span id="LinearModel-26"><a href="#LinearModel-26"><span class="linenos">26</span></a><span class="sd">            X (pd.DataFrame): The input features for prediction.</span>
-</span><span id="LinearModel-27"><a href="#LinearModel-27"><span class="linenos">27</span></a>
-</span><span id="LinearModel-28"><a href="#LinearModel-28"><span class="linenos">28</span></a><span class="sd">        Returns:</span>
-</span><span id="LinearModel-29"><a href="#LinearModel-29"><span class="linenos">29</span></a><span class="sd">            pd.Series: The predicted target values.</span>
-</span><span id="LinearModel-30"><a href="#LinearModel-30"><span class="linenos">30</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="LinearModel-31"><a href="#LinearModel-31"><span class="linenos">31</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicting with Linear Model&quot;</span><span class="p">)</span>
-</span><span id="LinearModel-32"><a href="#LinearModel-32"><span class="linenos">32</span></a>        <span class="k">return</span> <span class="p">(</span><span class="n">X</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="LinearModel-44"><a href="#LinearModel-44"><span class="linenos">44</span></a><span class="k">class</span> <span class="nc">LinearModel</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="LinearModel-45"><a href="#LinearModel-45"><span class="linenos">45</span></a>
+</span><span id="LinearModel-46"><a href="#LinearModel-46"><span class="linenos">46</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;A linear model for training and prediction.&quot;&quot;&quot;</span>
+</span><span id="LinearModel-47"><a href="#LinearModel-47"><span class="linenos">47</span></a> 
+</span><span id="LinearModel-48"><a href="#LinearModel-48"><span class="linenos">48</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="LinearModel-49"><a href="#LinearModel-49"><span class="linenos">49</span></a>
+</span><span id="LinearModel-50"><a href="#LinearModel-50"><span class="linenos">50</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>  <span class="c1"># Initialize a scikit-learn Linear Regression model</span>
+</span><span id="LinearModel-51"><a href="#LinearModel-51"><span class="linenos">51</span></a> 
+</span><span id="LinearModel-52"><a href="#LinearModel-52"><span class="linenos">52</span></a>    <span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="LinearModel-53"><a href="#LinearModel-53"><span class="linenos">53</span></a>
+</span><span id="LinearModel-54"><a href="#LinearModel-54"><span class="linenos">54</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Trains the linear model on the provided data.</span>
+</span><span id="LinearModel-55"><a href="#LinearModel-55"><span class="linenos">55</span></a><span class="sd"> </span>
+</span><span id="LinearModel-56"><a href="#LinearModel-56"><span class="linenos">56</span></a><span class="sd">        Args:</span>
+</span><span id="LinearModel-57"><a href="#LinearModel-57"><span class="linenos">57</span></a>
+</span><span id="LinearModel-58"><a href="#LinearModel-58"><span class="linenos">58</span></a><span class="sd">            X (pd.DataFrame): The input features for training.</span>
+</span><span id="LinearModel-59"><a href="#LinearModel-59"><span class="linenos">59</span></a>
+</span><span id="LinearModel-60"><a href="#LinearModel-60"><span class="linenos">60</span></a><span class="sd">            y (pd.Series): The target values for training.</span>
+</span><span id="LinearModel-61"><a href="#LinearModel-61"><span class="linenos">61</span></a>
+</span><span id="LinearModel-62"><a href="#LinearModel-62"><span class="linenos">62</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="LinearModel-63"><a href="#LinearModel-63"><span class="linenos">63</span></a>
+</span><span id="LinearModel-64"><a href="#LinearModel-64"><span class="linenos">64</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training Linear Model on data...&quot;</span><span class="p">)</span>
+</span><span id="LinearModel-65"><a href="#LinearModel-65"><span class="linenos">65</span></a>        
+</span><span id="LinearModel-66"><a href="#LinearModel-66"><span class="linenos">66</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># Train the model</span>
+</span><span id="LinearModel-67"><a href="#LinearModel-67"><span class="linenos">67</span></a>
+</span><span id="LinearModel-68"><a href="#LinearModel-68"><span class="linenos">68</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training complete.&quot;</span><span class="p">)</span>
+</span><span id="LinearModel-69"><a href="#LinearModel-69"><span class="linenos">69</span></a> 
+</span><span id="LinearModel-70"><a href="#LinearModel-70"><span class="linenos">70</span></a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>
+</span><span id="LinearModel-71"><a href="#LinearModel-71"><span class="linenos">71</span></a>
+</span><span id="LinearModel-72"><a href="#LinearModel-72"><span class="linenos">72</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Predicts the target values using the linear model.</span>
+</span><span id="LinearModel-73"><a href="#LinearModel-73"><span class="linenos">73</span></a><span class="sd"> </span>
+</span><span id="LinearModel-74"><a href="#LinearModel-74"><span class="linenos">74</span></a><span class="sd">        Args:</span>
+</span><span id="LinearModel-75"><a href="#LinearModel-75"><span class="linenos">75</span></a>
+</span><span id="LinearModel-76"><a href="#LinearModel-76"><span class="linenos">76</span></a><span class="sd">            X (pd.DataFrame): The input features for prediction.</span>
+</span><span id="LinearModel-77"><a href="#LinearModel-77"><span class="linenos">77</span></a><span class="sd"> </span>
+</span><span id="LinearModel-78"><a href="#LinearModel-78"><span class="linenos">78</span></a><span class="sd">        Returns:</span>
+</span><span id="LinearModel-79"><a href="#LinearModel-79"><span class="linenos">79</span></a>
+</span><span id="LinearModel-80"><a href="#LinearModel-80"><span class="linenos">80</span></a><span class="sd">            pd.Series: The predicted target values.</span>
+</span><span id="LinearModel-81"><a href="#LinearModel-81"><span class="linenos">81</span></a>
+</span><span id="LinearModel-82"><a href="#LinearModel-82"><span class="linenos">82</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="LinearModel-83"><a href="#LinearModel-83"><span class="linenos">83</span></a>
+</span><span id="LinearModel-84"><a href="#LinearModel-84"><span class="linenos">84</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicting with Linear Model...&quot;</span><span class="p">)</span>
+</span><span id="LinearModel-85"><a href="#LinearModel-85"><span class="linenos">85</span></a>
+</span><span id="LinearModel-86"><a href="#LinearModel-86"><span class="linenos">86</span></a>        <span class="n">predictions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>  <span class="c1"># Predict using the model</span>
+</span><span id="LinearModel-87"><a href="#LinearModel-87"><span class="linenos">87</span></a>
+</span><span id="LinearModel-88"><a href="#LinearModel-88"><span class="linenos">88</span></a>        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">predictions</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -142,6 +166,17 @@
 </div>
 
 
+                            <div id="LinearModel.model" class="classattr">
+                                <div class="attr variable">
+            <span class="name">model</span>
+
+        
+    </div>
+    <a class="headerlink" href="#LinearModel.model"></a>
+    
+    
+
+                            </div>
                             <div id="LinearModel.train" class="classattr">
                                         <input id="LinearModel.train-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
@@ -153,23 +188,34 @@
 
     </div>
     <a class="headerlink" href="#LinearModel.train"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="LinearModel.train-12"><a href="#LinearModel.train-12"><span class="linenos">12</span></a>    <span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="LinearModel.train-13"><a href="#LinearModel.train-13"><span class="linenos">13</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Trains the linear model on the provided data.</span>
-</span><span id="LinearModel.train-14"><a href="#LinearModel.train-14"><span class="linenos">14</span></a>
-</span><span id="LinearModel.train-15"><a href="#LinearModel.train-15"><span class="linenos">15</span></a><span class="sd">        Args:</span>
-</span><span id="LinearModel.train-16"><a href="#LinearModel.train-16"><span class="linenos">16</span></a><span class="sd">            X (pd.DataFrame): The input features for training.</span>
-</span><span id="LinearModel.train-17"><a href="#LinearModel.train-17"><span class="linenos">17</span></a><span class="sd">            y (pd.Series): The target values for training.</span>
-</span><span id="LinearModel.train-18"><a href="#LinearModel.train-18"><span class="linenos">18</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="LinearModel.train-19"><a href="#LinearModel.train-19"><span class="linenos">19</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training Linear Model on data&quot;</span><span class="p">)</span>
-</span><span id="LinearModel.train-20"><a href="#LinearModel.train-20"><span class="linenos">20</span></a>        <span class="c1"># Dummy training logic</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="LinearModel.train-52"><a href="#LinearModel.train-52"><span class="linenos">52</span></a>    <span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="LinearModel.train-53"><a href="#LinearModel.train-53"><span class="linenos">53</span></a>
+</span><span id="LinearModel.train-54"><a href="#LinearModel.train-54"><span class="linenos">54</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Trains the linear model on the provided data.</span>
+</span><span id="LinearModel.train-55"><a href="#LinearModel.train-55"><span class="linenos">55</span></a><span class="sd"> </span>
+</span><span id="LinearModel.train-56"><a href="#LinearModel.train-56"><span class="linenos">56</span></a><span class="sd">        Args:</span>
+</span><span id="LinearModel.train-57"><a href="#LinearModel.train-57"><span class="linenos">57</span></a>
+</span><span id="LinearModel.train-58"><a href="#LinearModel.train-58"><span class="linenos">58</span></a><span class="sd">            X (pd.DataFrame): The input features for training.</span>
+</span><span id="LinearModel.train-59"><a href="#LinearModel.train-59"><span class="linenos">59</span></a>
+</span><span id="LinearModel.train-60"><a href="#LinearModel.train-60"><span class="linenos">60</span></a><span class="sd">            y (pd.Series): The target values for training.</span>
+</span><span id="LinearModel.train-61"><a href="#LinearModel.train-61"><span class="linenos">61</span></a>
+</span><span id="LinearModel.train-62"><a href="#LinearModel.train-62"><span class="linenos">62</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="LinearModel.train-63"><a href="#LinearModel.train-63"><span class="linenos">63</span></a>
+</span><span id="LinearModel.train-64"><a href="#LinearModel.train-64"><span class="linenos">64</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training Linear Model on data...&quot;</span><span class="p">)</span>
+</span><span id="LinearModel.train-65"><a href="#LinearModel.train-65"><span class="linenos">65</span></a>        
+</span><span id="LinearModel.train-66"><a href="#LinearModel.train-66"><span class="linenos">66</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># Train the model</span>
+</span><span id="LinearModel.train-67"><a href="#LinearModel.train-67"><span class="linenos">67</span></a>
+</span><span id="LinearModel.train-68"><a href="#LinearModel.train-68"><span class="linenos">68</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training complete.&quot;</span><span class="p">)</span>
 </span></pre></div>
 
 
             <div class="docstring"><p>Trains the linear model on the provided data.</p>
 
-<p>Args:
-    X (pd.DataFrame): The input features for training.
-    y (pd.Series): The target values for training.</p>
+<p>Args:</p>
+
+<pre><code>X (pd.DataFrame): The input features for training.
+
+y (pd.Series): The target values for training.
+</code></pre>
 </div>
 
 
@@ -185,27 +231,39 @@
 
     </div>
     <a class="headerlink" href="#LinearModel.predict"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="LinearModel.predict-22"><a href="#LinearModel.predict-22"><span class="linenos">22</span></a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>
-</span><span id="LinearModel.predict-23"><a href="#LinearModel.predict-23"><span class="linenos">23</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Predicts the target values using the linear model.</span>
-</span><span id="LinearModel.predict-24"><a href="#LinearModel.predict-24"><span class="linenos">24</span></a>
-</span><span id="LinearModel.predict-25"><a href="#LinearModel.predict-25"><span class="linenos">25</span></a><span class="sd">        Args:</span>
-</span><span id="LinearModel.predict-26"><a href="#LinearModel.predict-26"><span class="linenos">26</span></a><span class="sd">            X (pd.DataFrame): The input features for prediction.</span>
-</span><span id="LinearModel.predict-27"><a href="#LinearModel.predict-27"><span class="linenos">27</span></a>
-</span><span id="LinearModel.predict-28"><a href="#LinearModel.predict-28"><span class="linenos">28</span></a><span class="sd">        Returns:</span>
-</span><span id="LinearModel.predict-29"><a href="#LinearModel.predict-29"><span class="linenos">29</span></a><span class="sd">            pd.Series: The predicted target values.</span>
-</span><span id="LinearModel.predict-30"><a href="#LinearModel.predict-30"><span class="linenos">30</span></a><span class="sd">        &quot;&quot;&quot;</span>
-</span><span id="LinearModel.predict-31"><a href="#LinearModel.predict-31"><span class="linenos">31</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicting with Linear Model&quot;</span><span class="p">)</span>
-</span><span id="LinearModel.predict-32"><a href="#LinearModel.predict-32"><span class="linenos">32</span></a>        <span class="k">return</span> <span class="p">(</span><span class="n">X</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="LinearModel.predict-70"><a href="#LinearModel.predict-70"><span class="linenos">70</span></a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>
+</span><span id="LinearModel.predict-71"><a href="#LinearModel.predict-71"><span class="linenos">71</span></a>
+</span><span id="LinearModel.predict-72"><a href="#LinearModel.predict-72"><span class="linenos">72</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Predicts the target values using the linear model.</span>
+</span><span id="LinearModel.predict-73"><a href="#LinearModel.predict-73"><span class="linenos">73</span></a><span class="sd"> </span>
+</span><span id="LinearModel.predict-74"><a href="#LinearModel.predict-74"><span class="linenos">74</span></a><span class="sd">        Args:</span>
+</span><span id="LinearModel.predict-75"><a href="#LinearModel.predict-75"><span class="linenos">75</span></a>
+</span><span id="LinearModel.predict-76"><a href="#LinearModel.predict-76"><span class="linenos">76</span></a><span class="sd">            X (pd.DataFrame): The input features for prediction.</span>
+</span><span id="LinearModel.predict-77"><a href="#LinearModel.predict-77"><span class="linenos">77</span></a><span class="sd"> </span>
+</span><span id="LinearModel.predict-78"><a href="#LinearModel.predict-78"><span class="linenos">78</span></a><span class="sd">        Returns:</span>
+</span><span id="LinearModel.predict-79"><a href="#LinearModel.predict-79"><span class="linenos">79</span></a>
+</span><span id="LinearModel.predict-80"><a href="#LinearModel.predict-80"><span class="linenos">80</span></a><span class="sd">            pd.Series: The predicted target values.</span>
+</span><span id="LinearModel.predict-81"><a href="#LinearModel.predict-81"><span class="linenos">81</span></a>
+</span><span id="LinearModel.predict-82"><a href="#LinearModel.predict-82"><span class="linenos">82</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="LinearModel.predict-83"><a href="#LinearModel.predict-83"><span class="linenos">83</span></a>
+</span><span id="LinearModel.predict-84"><a href="#LinearModel.predict-84"><span class="linenos">84</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicting with Linear Model...&quot;</span><span class="p">)</span>
+</span><span id="LinearModel.predict-85"><a href="#LinearModel.predict-85"><span class="linenos">85</span></a>
+</span><span id="LinearModel.predict-86"><a href="#LinearModel.predict-86"><span class="linenos">86</span></a>        <span class="n">predictions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>  <span class="c1"># Predict using the model</span>
+</span><span id="LinearModel.predict-87"><a href="#LinearModel.predict-87"><span class="linenos">87</span></a>
+</span><span id="LinearModel.predict-88"><a href="#LinearModel.predict-88"><span class="linenos">88</span></a>        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">predictions</span><span class="p">)</span>
 </span></pre></div>
 
 
             <div class="docstring"><p>Predicts the target values using the linear model.</p>
 
-<p>Args:
-    X (pd.DataFrame): The input features for prediction.</p>
+<p>Args:</p>
 
-<p>Returns:
-    pd.Series: The predicted target values.</p>
+<pre><code>X (pd.DataFrame): The input features for prediction.
+</code></pre>
+
+<p>Returns:</p>
+
+<pre><code>pd.Series: The predicted target values.
+</code></pre>
 </div>
 
 
