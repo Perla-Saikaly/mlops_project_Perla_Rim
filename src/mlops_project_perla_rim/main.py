@@ -20,7 +20,7 @@ parser.add_argument(
     help="Path to the configuration file (e.g., config/config.yml).",
 )
  
-def main():
+def main() -> None:
     """
     Main function for running the ML pipeline.
  
@@ -62,6 +62,6 @@ def main():
     predictions = model.predict(X)
     print("Predictions:")
     print(predictions)
- 
+    pass
 if __name__ == "__main__":
     main()
