@@ -9,3 +9,7 @@ transformation:
 
 model:
   type: "linear"  # This defines the model type
+
+mlflow:
+  tracking_uri: "http://localhost:5000"
+  experiment_name: "mlops_project_perla_rim_experiments"

@@ -29,6 +29,12 @@ class TransformationConfig(BaseModel):
         return value
 
 
+class MLflowConfig(BaseModel):
+    """Configuration for MLflow."""
+    tracking_uri: str
+    experiment_name: str
+
+
 class ModelConfig(BaseModel):
     type: str
 
@@ -37,6 +43,7 @@ class Config(BaseModel):
     data_loader: DataLoaderConfig
     transformation: TransformationConfig
     model: ModelConfig
+    mlflow: MLflowConfig
 
 
 def load_config(config_path: str) -> Config:
