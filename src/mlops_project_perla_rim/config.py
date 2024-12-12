@@ -2,8 +2,6 @@
 
 from pydantic import BaseModel, validator
 from omegaconf import OmegaConf
-
-# import os
 from typing import Dict, Any
 
 
@@ -37,6 +35,13 @@ class MLflowConfig(BaseModel):
 
 class ModelConfig(BaseModel):
     type: str
+    params: Dict[str, Any] = {}
+
+    @validator("type")
+    def validate_model_type(cls, value: str) -> str:
+        if value not in {"tree", "linear"}:
+            raise ValueError("model type must be 'linear' or 'tree'")
+        return value
 
 
 class Config(BaseModel):
@@ -50,5 +55,5 @@ def load_config(config_path: str) -> Config:
     raw_config = OmegaConf.load(config_path)
     config_dict: Dict[str, Any] = OmegaConf.to_container(
         raw_config, resolve=True
-    )  # Fix the type here
+    )
     return Config(**config_dict)

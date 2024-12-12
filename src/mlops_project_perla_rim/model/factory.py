@@ -8,7 +8,7 @@ class ModelFactory:
     """Factory class to create model instances based on the model type."""
 
     @staticmethod
-    def get_model(model_type: str) -> Model:
+    def get_model(config) -> Model:
         """Returns an instance of a model based on the provided model type.
 
         Args:
@@ -20,9 +20,10 @@ class ModelFactory:
         Raises:
             ValueError: If the provided model type is unsupported.
         """
+        model_type = config.type
         if model_type == "linear":
-            return LinearModel()
+            return LinearModel(**config.params)
         elif model_type == "tree":
-            return DecisionTreeModel()
+            return DecisionTreeModel(**config.params)
         else:
             raise ValueError(f"Unsupported model type: {model_type}")

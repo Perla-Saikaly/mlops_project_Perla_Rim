@@ -1,0 +1,52 @@
+2024-12-12 17:22:08.360 | INFO     | __main__:main:24 - Parsing command line arguments.
+2024-12-12 17:22:25.853 | INFO     | __main__:main:24 - Parsing command line arguments.
+2024-12-12 17:22:25.855 | DEBUG    | __main__:main:26 - Command line arguments: Namespace(config='config/config_dev.yaml').
+2024-12-12 17:22:25.858 | INFO     | __main__:main:28 - Loading configuration.
+2024-12-12 17:22:25.862 | INFO     | __main__:main:30 - Loaded configuration successfully.
+2024-12-12 17:22:25.868 | DEBUG    | __main__:main:31 - Configuration: data_loader=DataLoaderConfig(file_path='data/synthetic_health.csv', file_type='csv') transformation=TransformationConfig(normalize=False, scaling_method='minmax') model=ModelConfig(type='linear', params={}) mlflow=MLflowConfig(tracking_uri='http://localhost:5000', experiment_name='mlops_project_perla_rim_experiments')
+2024-12-12 17:25:52.799 | INFO     | __main__:main:24 - Parsing command line arguments.
+2024-12-12 17:25:52.801 | DEBUG    | __main__:main:26 - Command line arguments: Namespace(config='config/config_dev.yaml').
+2024-12-12 17:25:52.802 | INFO     | __main__:main:28 - Loading configuration.
+2024-12-12 17:25:52.816 | INFO     | __main__:main:30 - Loaded configuration successfully.
+2024-12-12 17:25:52.818 | DEBUG    | __main__:main:31 - Configuration: data_loader=DataLoaderConfig(file_path='data/synthetic_health.csv', file_type='csv') transformation=TransformationConfig(normalize=False, scaling_method='minmax') model=ModelConfig(type='linear', params={}) mlflow=MLflowConfig(tracking_uri='http://localhost:5000', experiment_name='mlops_project_perla_rim_experiments')
+2024-12-12 17:28:25.132 | INFO     | __main__:main:24 - Parsing command line arguments.
+2024-12-12 17:28:25.134 | DEBUG    | __main__:main:26 - Command line arguments: Namespace(config='config/config_dev.yaml').
+2024-12-12 17:28:25.135 | INFO     | __main__:main:28 - Loading configuration.
+2024-12-12 17:28:25.138 | INFO     | __main__:main:30 - Loaded configuration successfully.
+2024-12-12 17:28:25.146 | DEBUG    | __main__:main:31 - Configuration: data_loader=DataLoaderConfig(file_path='data/synthetic_health.csv', file_type='csv') transformation=TransformationConfig(normalize=False, scaling_method='minmax') model=ModelConfig(type='linear', params={}) mlflow=MLflowConfig(tracking_uri='http://localhost:5000', experiment_name='mlops_project_perla_rim_experiments')
+2024-12-12 17:28:45.373 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-12 17:28:45.435 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-12 17:28:45.525 | ERROR    | __main__:main:68 - Training failed: Unsupported model type: type='linear' params={}
+2024-12-12 17:32:37.416 | INFO     | __main__:main:24 - Parsing command line arguments.
+2024-12-12 17:32:37.417 | DEBUG    | __main__:main:26 - Command line arguments: Namespace(config='config/config_dev.yaml').
+2024-12-12 17:32:37.419 | INFO     | __main__:main:28 - Loading configuration.
+2024-12-12 17:32:37.430 | INFO     | __main__:main:30 - Loaded configuration successfully.
+2024-12-12 17:32:37.444 | DEBUG    | __main__:main:31 - Configuration: data_loader=DataLoaderConfig(file_path='data/synthetic_health.csv', file_type='csv') transformation=TransformationConfig(normalize=False, scaling_method='minmax') model=ModelConfig(type='linear', params={}) mlflow=MLflowConfig(tracking_uri='http://localhost:5000', experiment_name='mlops_project_perla_rim_experiments')
+2024-12-12 17:32:41.671 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-12 17:32:41.675 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-12 17:36:53.818 | INFO     | __main__:main:24 - Parsing command line arguments.
+2024-12-12 17:36:53.820 | DEBUG    | __main__:main:26 - Command line arguments: Namespace(config='config/config_dev.yaml').
+2024-12-12 17:36:53.822 | INFO     | __main__:main:28 - Loading configuration.
+2024-12-12 17:36:53.895 | INFO     | __main__:main:30 - Loaded configuration successfully.
+2024-12-12 17:36:53.899 | DEBUG    | __main__:main:31 - Configuration: data_loader=DataLoaderConfig(file_path='data/synthetic_health.csv', file_type='csv') transformation=TransformationConfig(normalize=False, scaling_method='minmax') model=ModelConfig(type='linear', params={'fit_intercept': True, 'normalize': False, 'n_jobs': -1, 'positive': False}) mlflow=MLflowConfig(tracking_uri='http://localhost:5000', experiment_name='mlops_project_perla_rim_experiments')
+2024-12-12 17:36:58.389 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-12 17:36:58.414 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-12 17:36:58.456 | ERROR    | __main__:main:68 - Training failed: LinearModel.__init__() got an unexpected keyword argument 'fit_intercept'
+2024-12-12 17:37:22.722 | INFO     | __main__:main:24 - Parsing command line arguments.
+2024-12-12 17:37:22.725 | DEBUG    | __main__:main:26 - Command line arguments: Namespace(config='config/config_dev.yaml').
+2024-12-12 17:37:22.727 | INFO     | __main__:main:28 - Loading configuration.
+2024-12-12 17:38:04.229 | INFO     | __main__:main:24 - Parsing command line arguments.
+2024-12-12 17:38:04.230 | DEBUG    | __main__:main:26 - Command line arguments: Namespace(config='config/config_dev.yaml').
+2024-12-12 17:38:04.231 | INFO     | __main__:main:28 - Loading configuration.
+2024-12-12 17:38:04.265 | INFO     | __main__:main:30 - Loaded configuration successfully.
+2024-12-12 17:38:04.268 | DEBUG    | __main__:main:31 - Configuration: data_loader=DataLoaderConfig(file_path='data/synthetic_health.csv', file_type='csv') transformation=TransformationConfig(normalize=False, scaling_method='minmax') model=ModelConfig(type='linear', params={'fit_intercept': True, 'normalize': False, 'n_jobs': -1, 'positive': False}) mlflow=MLflowConfig(tracking_uri='http://localhost:5000', experiment_name='mlops_project_perla_rim_experiments')
+2024-12-12 17:38:08.618 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-12 17:38:08.622 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-12 17:38:08.651 | ERROR    | __main__:main:68 - Training failed: LinearModel.__init__() got an unexpected keyword argument 'fit_intercept'
+2024-12-12 17:38:36.314 | INFO     | __main__:main:24 - Parsing command line arguments.
+2024-12-12 17:38:36.315 | DEBUG    | __main__:main:26 - Command line arguments: Namespace(config='config/config_dev.yaml').
+2024-12-12 17:38:36.316 | INFO     | __main__:main:28 - Loading configuration.
+2024-12-12 17:38:36.331 | INFO     | __main__:main:30 - Loaded configuration successfully.
+2024-12-12 17:38:36.331 | DEBUG    | __main__:main:31 - Configuration: data_loader=DataLoaderConfig(file_path='data/synthetic_health.csv', file_type='csv') transformation=TransformationConfig(normalize=False, scaling_method='minmax') model=ModelConfig(type='linear', params={}) mlflow=MLflowConfig(tracking_uri='http://localhost:5000', experiment_name='mlops_project_perla_rim_experiments')
+2024-12-12 17:38:42.370 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-12 17:38:42.392 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv

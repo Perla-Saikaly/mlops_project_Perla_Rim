@@ -8,7 +8,8 @@ transformation:
 
 
 model:
-  type: "linear"  # This defines the model type
+  type: "linear"
+  params: {} 
 
 mlflow:
   tracking_uri: "http://localhost:5000"
