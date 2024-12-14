@@ -143,3 +143,17 @@
 2024-12-14 18:11:42.301 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
 2024-12-14 18:11:42.343 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
 2024-12-14 18:11:42.373 | ERROR    | mlops_project_perla_rim.main:main:88 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-14 19:56:08.205 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-14 19:56:08.226 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-14 19:56:08.227 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-14 19:56:08.260 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-14 19:56:08.261 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-14 19:56:08.280 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-14 19:56:08.294 | ERROR    | mlops_project_perla_rim.main:main:88 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-14 20:41:44.158 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-14 20:41:44.167 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-14 20:41:44.168 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-14 20:41:44.180 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-14 20:41:44.180 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-14 20:41:44.196 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-14 20:41:44.215 | ERROR    | mlops_project_perla_rim.main:main:88 - Model training/prediction failed: 'str' object has no attribute 'type'
