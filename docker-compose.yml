@@ -4,23 +4,31 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "8001:8001"  
     volumes:
       - .:/app
     environment:
-      - CONFIG_PATH=config/config_dev.yam
+      - CONFIG_PATH=config/config_dev.yaml
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"  # Prometheus runs on port 9090
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
 
   mlflow:
     image: ghcr.io/mlflow/mlflow:v2.15.0
     ports:
-      - "5000:5000"
+      - "5000:5000"  # MLflow tracking server exposed on port 5000
     environment:
       - MLFLOW_TRACKING_URI=http://127.0.0.1:5000
     volumes:
       - ./mlruns:/mlflow/artifacts
+      - ./mlflow.db:/mlflow/db/mlflow.db
     command: >
       mlflow server
       --backend-store-uri sqlite:///mlflow.db
-      --default-artifact-root ./mlruns
+      --default-artifact-root /mlflow/artifacts
       --host 0.0.0.0
       --port 5000

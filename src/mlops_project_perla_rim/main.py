@@ -24,10 +24,7 @@ parser.add_argument(
     required=True,
     help="Path to the configuration file (e.g., config/config.yml).",
 )
-def load_pipeline():
-    # Example placeholder logic
-    print("Pipeline loaded!")
-    return "Pipeline instance"
+
 
 def main() -> None:
     """

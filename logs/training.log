@@ -50,3 +50,26 @@
 2024-12-12 17:38:36.331 | DEBUG    | __main__:main:31 - Configuration: data_loader=DataLoaderConfig(file_path='data/synthetic_health.csv', file_type='csv') transformation=TransformationConfig(normalize=False, scaling_method='minmax') model=ModelConfig(type='linear', params={}) mlflow=MLflowConfig(tracking_uri='http://localhost:5000', experiment_name='mlops_project_perla_rim_experiments')
 2024-12-12 17:38:42.370 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
 2024-12-12 17:38:42.392 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-14 19:17:11.962 | INFO     | __main__:main:24 - Parsing command line arguments.
+2024-12-14 19:17:11.963 | DEBUG    | __main__:main:26 - Command line arguments: Namespace(config='config/config_dev.yaml').
+2024-12-14 19:17:11.964 | INFO     | __main__:main:28 - Loading configuration.
+2024-12-14 19:17:11.983 | INFO     | __main__:main:30 - Loaded configuration successfully.
+2024-12-14 19:17:11.983 | DEBUG    | __main__:main:31 - Configuration: data_loader=DataLoaderConfig(file_path='data/synthetic_health.csv', file_type='csv') transformation=TransformationConfig(normalize=False, scaling_method='minmax') model=ModelConfig(type='linear', params={}) mlflow=MLflowConfig(tracking_uri='http://localhost:5000', experiment_name='mlops_project_perla_rim_experiments')
+2024-12-14 19:17:18.229 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-14 19:17:18.258 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-14 19:26:55.670 | INFO     | __main__:main:24 - Parsing command line arguments.
+2024-12-14 19:26:55.673 | DEBUG    | __main__:main:26 - Command line arguments: Namespace(config='config/config_dev.yaml').
+2024-12-14 19:26:55.674 | INFO     | __main__:main:28 - Loading configuration.
+2024-12-14 19:26:55.689 | INFO     | __main__:main:30 - Loaded configuration successfully.
+2024-12-14 19:26:55.692 | DEBUG    | __main__:main:31 - Configuration: data_loader=DataLoaderConfig(file_path='data/synthetic_health.csv', file_type='csv') transformation=TransformationConfig(normalize=False, scaling_method='minmax') model=ModelConfig(type='linear', params={}) mlflow=MLflowConfig(tracking_uri='http://localhost:5000', experiment_name='mlops_project_perla_rim_experiments')
+2024-12-14 19:26:59.211 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-14 19:26:59.230 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-14 19:37:56.899 | INFO     | __main__:main:109 - Parsing command line arguments.
+2024-12-14 19:37:56.900 | DEBUG    | __main__:main:111 - Command line arguments: Namespace(config='config/config_dev.yaml').
+2024-12-14 19:37:56.900 | INFO     | __main__:main:114 - Loading configuration.
+2024-12-14 19:37:56.906 | INFO     | __main__:main:116 - Loaded configuration successfully.
+2024-12-14 19:37:56.907 | DEBUG    | __main__:main:117 - Configuration: data_loader=DataLoaderConfig(file_path='data/synthetic_health.csv', file_type='csv') transformation=TransformationConfig(normalize=False, scaling_method='minmax') model=ModelConfig(type='linear', params={}) mlflow=MLflowConfig(tracking_uri='http://localhost:5000', experiment_name='mlops_project_perla_rim_experiments')
+2024-12-14 19:38:02.684 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-14 19:38:02.693 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-14 19:38:02.701 | INFO     | __main__:main:145 - Training the model...
+2024-12-14 19:38:20.114 | INFO     | __main__:main:151 - Model evaluation completed. Mean Squared Error: 0.007409909077686002
