@@ -33,25 +33,27 @@ ______Usage Examples
 1. Run Locally with Poetry
     CLI Commands
     Entry Points
+   
         *development*
         poetry run mlops_project_perla_rim --config config/config_dev.yaml
 
         *production*
         poetry run mlops_project_perla_rim --config config/config_prod.yaml
+   
     run mlflow without docker:
         1st: start mlflow server: poetry run mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns --host 0.0.0.0 --port 5000
         2nd: run mlflow: poetry run python src/mlops_project_perla_rim/train.py --config config/config_dev.yaml
 
-2. Run with Docker
+3. Run with Docker
     *Training*
     docker-compose up
     you can access check training, logs and prediction in docker desktop
     you can also access mlflow, grafana, alert... through docker
 
 
-3. mypy: poetry run mypy src/mlops_project_perla_rim
-4. invoke: poetry invoke <command>
-5. pytest: poetry run pytest
-6. alerts and tests are done automatically on github whenever a push happens using CI/CD
-7. you can access pdoc results from the docs folder
-8. you can access logs from the log folder
+4. mypy: poetry run mypy src/mlops_project_perla_rim
+5. invoke: poetry invoke <command>
+6. pytest: poetry run pytest
+7. alerts and tests are done automatically on github whenever a push happens using CI/CD
+8. you can access pdoc results from the docs folder
+9. you can access logs from the log folder
