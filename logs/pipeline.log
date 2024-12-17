@@ -157,3 +157,10 @@
 2024-12-14 20:41:44.180 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
 2024-12-14 20:41:44.196 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
 2024-12-14 20:41:44.215 | ERROR    | mlops_project_perla_rim.main:main:88 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-17 16:24:39.333 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-17 16:24:39.355 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-17 16:24:39.359 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-17 16:24:39.399 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-17 16:24:39.400 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-17 16:24:39.438 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-17 16:24:39.468 | ERROR    | mlops_project_perla_rim.main:main:88 - Model training/prediction failed: 'str' object has no attribute 'type'

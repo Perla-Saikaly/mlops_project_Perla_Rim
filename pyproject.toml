@@ -20,7 +20,6 @@ prometheus-client = "^0.21.1"
 
 [tool.poetry.scripts]
 mlops_project_perla_rim= "mlops_project_perla_rim.main:main"
-mlops_project_perla_rim= "mlops_project_perla_rim.train:main"
 
 [tool.poetry.group.dev.dependencies]
 pdoc = "^15.0.0"
