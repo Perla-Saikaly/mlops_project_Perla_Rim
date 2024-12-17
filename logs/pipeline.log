@@ -164,3 +164,90 @@
 2024-12-17 16:24:39.400 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
 2024-12-17 16:24:39.438 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
 2024-12-17 16:24:39.468 | ERROR    | mlops_project_perla_rim.main:main:88 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-17 16:37:55.844 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-17 16:37:55.933 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-17 16:37:55.935 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-17 16:37:57.124 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-17 16:37:57.157 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-17 16:37:57.386 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-17 16:37:57.523 | ERROR    | mlops_project_perla_rim.main:main:88 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-17 18:45:55.368 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-17 18:47:14.423 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-17 18:47:14.452 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-17 18:47:14.640 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-17 18:47:14.733 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-17 18:47:14.749 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-17 18:47:15.001 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-17 18:47:15.091 | ERROR    | mlops_project_perla_rim.main:main:88 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-17 18:56:22.033 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-17 18:56:22.045 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-17 18:56:22.047 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-17 18:56:22.071 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-17 18:56:22.073 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-17 18:56:22.148 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-17 18:56:22.206 | DEBUG    | mlops_project_perla_rim.main:main:82 - Model Config: type='linear' params={}, type: <class 'mlops_project_perla_rim.config.ModelConfig'>
+2024-12-17 18:56:22.209 | ERROR    | mlops_project_perla_rim.main:main:91 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-17 18:57:33.590 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-17 18:57:33.602 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-17 18:57:33.609 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-17 18:57:33.637 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-17 18:57:33.639 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-17 18:57:33.697 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-17 18:57:33.743 | DEBUG    | mlops_project_perla_rim.main:main:82 - Model Config: type='linear' params={}, type: <class 'mlops_project_perla_rim.config.ModelConfig'>
+2024-12-17 18:57:33.748 | ERROR    | mlops_project_perla_rim.main:main:91 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-17 19:02:35.875 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-17 19:02:35.902 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-17 19:02:35.956 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-17 19:02:36.009 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-17 19:02:36.022 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-17 19:02:36.207 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-17 19:02:36.321 | DEBUG    | mlops_project_perla_rim.main:main:82 - Model Config: type='linear' params={}, type: <class 'mlops_project_perla_rim.config.ModelConfig'>
+2024-12-17 19:02:36.372 | ERROR    | mlops_project_perla_rim.main:main:91 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-17 19:08:48.430 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-17 19:08:48.442 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-17 19:08:48.454 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-17 19:08:48.506 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-17 19:08:48.515 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-17 19:08:48.579 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-17 19:08:48.623 | DEBUG    | mlops_project_perla_rim.main:main:82 - Model Config: type='linear' params={}, type: <class 'mlops_project_perla_rim.config.ModelConfig'>
+2024-12-17 19:08:48.644 | ERROR    | mlops_project_perla_rim.main:main:91 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-17 19:09:47.871 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-17 19:09:47.893 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-17 19:09:47.896 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-17 19:09:47.915 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-17 19:09:47.916 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-17 19:09:47.969 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-17 19:09:48.037 | DEBUG    | mlops_project_perla_rim.main:main:82 - Model Config: type='linear' params={}, type: <class 'mlops_project_perla_rim.config.ModelConfig'>
+2024-12-17 19:09:48.039 | ERROR    | mlops_project_perla_rim.main:main:91 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-17 19:11:41.613 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-17 19:11:41.625 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-17 19:11:41.629 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-17 19:11:41.659 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-17 19:11:41.662 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-17 19:11:41.721 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-17 19:11:41.775 | DEBUG    | mlops_project_perla_rim.main:main:82 - Model Config: type='linear' params={}, type: <class 'mlops_project_perla_rim.config.ModelConfig'>
+2024-12-17 19:11:41.778 | ERROR    | mlops_project_perla_rim.main:main:91 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-17 19:12:03.294 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-17 19:12:03.301 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-17 19:12:03.307 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-17 19:12:03.318 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-17 19:12:03.322 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-17 19:12:03.369 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-17 19:12:03.423 | DEBUG    | mlops_project_perla_rim.main:main:82 - Model Config: type='linear' params={}, type: <class 'mlops_project_perla_rim.config.ModelConfig'>
+2024-12-17 19:12:03.427 | ERROR    | mlops_project_perla_rim.main:main:91 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-17 19:13:42.928 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-17 19:13:42.949 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-17 19:13:42.957 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-17 19:13:42.985 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-17 19:13:42.988 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-17 19:13:43.047 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-17 19:13:43.093 | DEBUG    | mlops_project_perla_rim.main:main:82 - Model Config: type='linear' params={}, type: <class 'mlops_project_perla_rim.config.ModelConfig'>
+2024-12-17 19:13:43.095 | ERROR    | mlops_project_perla_rim.main:main:91 - Model training/prediction failed: 'str' object has no attribute 'type'
+2024-12-17 19:17:07.449 | INFO     | mlops_project_perla_rim.main:main:47 - Pipeline execution started.
+2024-12-17 19:17:07.459 | INFO     | mlops_project_perla_rim.main:main:49 - Loaded configuration successfully.
+2024-12-17 19:17:07.465 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:19 - Loading data from CSV file at data/synthetic_health.csv
+2024-12-17 19:17:07.503 | INFO     | mlops_project_perla_rim.data_loader.csv_loader:load_data:22 - Successfully loaded data from data/synthetic_health.csv
+2024-12-17 19:17:07.504 | INFO     | mlops_project_perla_rim.main:main:57 - Data loaded successfully.
+2024-12-17 19:17:07.592 | INFO     | mlops_project_perla_rim.main:main:70 - Data transformed successfully.
+2024-12-17 19:17:07.761 | DEBUG    | mlops_project_perla_rim.main:main:82 - Model Config: type='linear' params={}, type: <class 'mlops_project_perla_rim.config.ModelConfig'>
+2024-12-17 19:17:07.772 | ERROR    | mlops_project_perla_rim.main:main:91 - Model training/prediction failed: 'str' object has no attribute 'type'

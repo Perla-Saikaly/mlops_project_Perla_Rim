@@ -1,7 +1,18 @@
 # mlops_project_perla_rim
 
 ______Project Description
-This project implements a modular, reusable, and extensible machine learning pipeline, following MLOps best practices. It includes data ingestion, preprocessing, model training, and inference functionalities, all integrated with Docker and Poetry for streamlined dependency and environment management.
+This project implements a modular, reusable, and extensible machine learning pipeline, following MLOps best practices. It includes data ingestion, preprocessing, and model training, all integrated with Docker and Poetry for streamlined dependency and environment management.
+
+_______about data:
+This dataset contains health and lifestyle-related data points for individuals, structured as follows:
+    Age: The individual's age in years.
+    BMI: Body Mass Index, a measure of body fat based on height and weight.
+    Exercise_Frequency: The number of exercise sessions per week.
+    Diet_Quality: A numeric score representing the quality of the individual's diet.
+    Sleep_Hours: Average number of hours slept per night.
+    Smoking_Status: Binary indicator (1 for smokers, 0 for non-smokers).
+    Alcohol_Consumption: The amount of alcohol consumed weekly, measured in an appropriate unit.
+    Health_Score: A comprehensive health score derived from the other features, representing overall health and well-being.
 
 ______Installation Instructions
 1. Prerequisites
@@ -15,21 +26,32 @@ ______Installation Instructions
 3. Install Dependencies with Poetry
     poetry install 
 4. Docker Setup
-    docker build -t mlops_project .
+    docker-compose build -t .
+
 
 ______Usage Examples
 1. Run Locally with Poetry
-    *Training*
-    poetry run mlops_project_perla_rim train --config config/config_train.yaml
+    CLI Commands
+    Entry Points
+        *development*
+        poetry run mlops_project_perla_rim --config config/config_dev.yaml
 
-    *Inference*
-    poetry run mlops_project_perla_rim inference --config config/config_infer.yaml
+        *production*
+        poetry run mlops_project_perla_rim --config config/config_prod.yaml
+    run mlflow without docker:
+        1st: start mlflow server: poetry run mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns --host 0.0.0.0 --port 5000
+        2nd: run mlflow: poetry run python src/mlops_project_perla_rim/train.py --config config/config_dev.yaml
 
 2. Run with Docker
     *Training*
-    docker run -v $(pwd)/config:/app/config mlops_project poetry run mlops_project_perla_rim train --config config/config_train.yaml
+    docker-compose up
+    you can access check training, logs and prediction in docker desktop
+    you can also access mlflow, grafana, alert... through docker
 
-    *Inference* 
-    docker run -v $(pwd)/config:/app/config mlops_project poetry run mlops_project_perla_rim inference --config config/config_infer.yaml
 
-
+3. mypy: poetry run mypy src/mlops_project_perla_rim
+4. invoke: poetry invoke <command>
+5. pytest: poetry run pytest
+6. alerts and tests are done automatically on github whenever a push happens using CI/CD
+7. you can access pdoc results from the docs folder
+8. you can access logs from the log folder

@@ -78,7 +78,10 @@ def main() -> None:
     try:
         X = transformed_data.drop(columns=["Health_Score"])
         y = transformed_data["Health_Score"]
-        model = ModelFactory.get_model(config.model.type)
+
+        logger.debug(f"Model Config: {config.model}, type: {type(config.model)}")
+        model = ModelFactory.get_model(config.model.type)  # Ensure `config.model` 
+            
         model.train(X, y)
         predictions = model.predict(X)
         logger.info("Model training and prediction completed successfully.")
